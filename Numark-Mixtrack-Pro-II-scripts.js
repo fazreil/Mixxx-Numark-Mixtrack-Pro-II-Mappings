@@ -487,7 +487,7 @@ NumarkMixTrackProII.pitch_bend_up_or_range = function(channel, control, value, s
  */
 NumarkMixTrackProII.hotcue = function(channel, control, value, status, group) {
     var deck = NumarkMixTrackProII.groupToDeck(group);
-    var cue_midi_controls = [[0x6D, 0x6E, 0x6F], [0x71, 0x71, 0x73]];
+    var cue_midi_controls = [[0x6D, 0x6E, 0x6F], [0x71, 0x72, 0x73]];
     var cue_num = cue_midi_controls[deck-1].indexOf(control) + 1;
     if (value && (control == 0x70 || control == 0x74)) {
         // toggle cue delete mode and it's LED
